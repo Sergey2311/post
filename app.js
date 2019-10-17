@@ -10,27 +10,16 @@ const post = {
     imageUrl: 'http://www.i-sonnik.ru/wp-content/uploads/2017/09/chernyj-lev.jpg',
     likes: 6,
     dislikes: 6,
-    videoUrl: 'https://www.youtube.com/watch?v=egwj2y7gpmY',
-    audioUrl: 'http://dl2.mp3party.net/online/169822.mp3',
 };
 
 const postEl = document.createElement('div');
 postEl.className = 'card'; 
 
+
 const imgEl = document.createElement('img');
 imgEl.src = post.imageUrl;
 imgEl.className = 'card-img-top';
 postEl.appendChild(imgEl);
-
-const videoEl = document.createElement('video');
-videoEl.src = post.videoUrl;
-videoEl.className = 'card-video-top';
-postEl.appendChild(videoEl);
-
-const audioEl = document.createElement('audio');
-audioEl.src = post.audioUrl;
-audioEl.className = 'card-audio-top';
-postEl.appendChild(audioEl);
 
 const postBodyEl = document.createElement('div');
 postBodyEl.className = 'card-body';
