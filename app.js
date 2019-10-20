@@ -43,23 +43,23 @@ const postContentEl = document.createElement('p');
 postContentEl.textContent = post.content;
 postBodyEl.appendChild(postContentEl);
 
-const likesEl = document.createElement('button');
-likesEl.className = 'btn btn-primary';
-likesEl.textContent = '👍 ' + post.likes;
-likesEl.onclick = function () {
+const likesOneEl = document.createElement('button');
+likesOneEl.className = 'btn btn-primary';
+likesOneEl.textContent = '👍 ' + post.likes;
+likesOneEl.onclick = function () {
     post.likes = post.likes + 1;
-    likesEl.textContent = '👍 ' + post.likes;
+    likesOneEl.textContent = '👍 ' + post.likes;
 };
-postBodyEl.appendChild(likesEl);
+postBodyEl.appendChild(likesOneEl);
 
-const dislikesEl = document.createElement('button');
-dislikesEl.className = 'btn btn-primary';
-dislikesEl.textContent = '👎 ' + post.likes;
-dislikesEl.onclick = function () {
+const dislikesOneEl = document.createElement('button');
+dislikesOneEl.className = 'btn btn-primary';
+dislikesOneEl.textContent = '👎 ' + post.dislikes;
+dislikesOneEl.onclick = function () {
     post.dislikes = post.dislikes + 1;
-    dislikesEl.textContent = '👎 ' + post.dislikes;
+    dislikesOneEl.textContent = '👎 ' + post.dislikes;
 };
-postBodyEl.appendChild(dislikesEl);
+postBodyEl.appendChild(dislikesOneEl);
 
 const postTwoBodyEl = document.createElement('div');
 postTwoBodyEl.className = 'card'; 
@@ -89,7 +89,7 @@ postTwoBodyEl.appendChild(likesTwoEl);
 
 const dislikesTwoEl = document.createElement('button');
 dislikesTwoEl.className = 'btn btn-primary';
-dislikesTwoEl.textContent = '👎 ' + postTwo.likes;
+dislikesTwoEl.textContent = '👎 ' + postTwo.dislikes;
 dislikesTwoEl.onclick = function () {
     postTwo.dislikes = postTwo.dislikes + 1;
     dislikesTwoEl.textContent = '👎 ' + postTwo.dislikes;
@@ -101,7 +101,7 @@ postThreeBodyEl.className = 'card';
 
 const audioEl = document.createElement('audio');
 audioEl.src = postThree.audioUrl;
-audioEl.className = 'audio';
+audioEl.className = 'embed-responsive embed-responsive-21by9 card-img-top';
 audioEl.controls = true;
 postThreeBodyEl.appendChild(audioEl);
 
@@ -120,7 +120,7 @@ postThreeBodyEl.appendChild(likesThreeEl);
 
 const dislikesThreeEl = document.createElement('button');
 dislikesThreeEl.className = 'btn btn-primary';
-dislikesThreeEl.textContent = '👎 ' + postThree.likes;
+dislikesThreeEl.textContent = '👎 ' + postThree.dislikes;
 dislikesThreeEl.onclick = function () {
     postThree.dislikes = postThree.dislikes + 1;
     dislikesThreeEl.textContent = '👎 ' + postThree.dislikes;
